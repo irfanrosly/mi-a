@@ -14,8 +14,11 @@ const ListItem = props => (
 		}}
 	>
 		<View style={{ flex: 0.8 }}>
-			<Text style={{ fontWeight: "bold" }}>{props.date}</Text>
-			<Text style={{ marginVertical: 3 }}>{props.temp}</Text>
+			<Text style={{ fontWeight: "bold" }}>{props.timeConverter(props.date)}</Text>
+			<Text style={{ marginVertical: 3 }}>
+				{props.temperatureConverter(props.minTemperature)} -{" "}
+				{props.temperatureConverter(props.maxTemperature)}
+			</Text>
 			<Text style={{ color: Colors.GREY }}>{props.condition}</Text>
 		</View>
 		<View

@@ -8,12 +8,23 @@ const create = () => {
 		headers: { Accept: "application/vnd.github.v3+json" }
 	})
 
-	const getUser = username => {
-		return apiPlayground.get(`/users/${username}`)
+	const apiWeather = apisauce.create({
+		baseURL: "http://api.openweathermap.org"
+	})
+
+	const getUser = () => {
+		return apiPlayground.get(`/users/irfanrosly`)
+	}
+
+	const getWeather = () => {
+		return apiWeather.get(
+			`/data/2.5/forecast?q=Singapore&APPID=4b8ec7537dddbc6fec21aca73d96d6e2&mode=json`
+		)
 	}
 
 	return {
-		getUser
+		getUser,
+		getWeather
 	}
 }
 
