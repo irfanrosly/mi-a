@@ -19,7 +19,7 @@ npm i -g expo-cli
 Clone the repositories into your machine. You can either download as .zip file or use cli.
 
 ```
-git clone && cd
+git clone https://github.com/irfanrosly/mi-a && cd mi-a
 ```
 
 Install all the dependecies libraries
