@@ -1,6 +1,6 @@
 import React from "react"
 import { View, Text, TouchableOpacity } from "react-native"
-import { MaterialIcons } from "@expo/vector-icons"
+import { Entypo } from "@expo/vector-icons"
 import { Colors } from "../constants"
 const ListItem = props => (
 	<View
@@ -14,12 +14,12 @@ const ListItem = props => (
 		}}
 	>
 		<View style={{ flex: 0.8 }}>
-			<Text style={{ fontWeight: "bold" }}>{props.timeConverter(props.date)}</Text>
+			<Text style={{ fontWeight: "bold" }}>{props.timeConverter(props.data.dt)}</Text>
 			<Text style={{ marginVertical: 3 }}>
-				{props.temperatureConverter(props.minTemperature)} -{" "}
-				{props.temperatureConverter(props.maxTemperature)}
+				{props.temperatureConverter(props.data.main.temp_max)} -{" "}
+				{props.temperatureConverter(props.data.main.temp_min)}
 			</Text>
-			<Text style={{ color: Colors.GREY }}>{props.condition}</Text>
+			<Text style={{ color: Colors.GREY }}>{props.data.weather[0].main}</Text>
 		</View>
 		<View
 			style={{
@@ -28,8 +28,8 @@ const ListItem = props => (
 				justifyContent: "center"
 			}}
 		>
-			<TouchableOpacity onPress={() => alert(props.date)}>
-				<MaterialIcons name="chevron-right" size={40} color={Colors.RED} />
+			<TouchableOpacity onPress={() => props.nav(props.data)}>
+				<Entypo name="chevron-right" size={30} color={Colors.RED} />
 			</TouchableOpacity>
 		</View>
 	</View>

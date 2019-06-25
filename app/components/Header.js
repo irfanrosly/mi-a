@@ -11,7 +11,7 @@ const Header = props => (
 			paddingTop: 20
 		}}
 	>
-		<Text>{props.title}</Text>
+		<Text style={{ fontWeight: "bold", color: Colors.WHITE }}>{props.title}</Text>
 	</View>
 )
 

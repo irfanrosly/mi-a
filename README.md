@@ -36,6 +36,7 @@ npm start
 
 ## Built With
 
+- [Expo](https://expo.io/) - A set of tools, libraries and services you can use to build native iOS and Android apps faster than ever before!
 - [Redux](https://github.com/reduxjs/redux) - Predictable state container for JavaScript apps
 - [Redux-Saga](https://github.com/redux-saga/redux-saga) - An alternative side effect model for Redux apps aside of [Thunk](https://github.com/reduxjs/redux-thunk)
 - [Apisauce](https://github.com/infinitered/apisauce) - Axios + standardized errors + request/response transforms. Simply put, Axios wrapper.
